@@ -1,0 +1,33 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner bank = new Scanner(System.in);
+        System.out.println("Hello, welcome to JP Morgan Chase bank. We are pleased to offer you our credit card options. Before we proceed, please, tell us a little bit more about your finances.\nPlease enter your credit score.");
+        int score = bank.nextInt();
+        System.out.println("Please enter your available assets, i.e. funds that are available for you.");
+        int assets = bank.nextInt();
+        System.out.println("Please enter your annual income.");
+        int annual = bank.nextInt();
+
+        if (score < 580) {
+            System.out.println("Sorry, your credit card cannot be approved right now.");
+        } else {
+
+            if (score >= 580 && annual >= 50000 || assets >= 10000) {
+                System.out.println("Congratulations! You are approved for a credit limit of 5000$");
+            } else {
+                if (score >= 720) {
+                    System.out.println("Congratulations! You are approved for a credit limit of 10000$");
+                } else {
+                    System.out.println("Sorry, your application is denied.");
+                }
+            }
+
+        }
+    }
+}
+
