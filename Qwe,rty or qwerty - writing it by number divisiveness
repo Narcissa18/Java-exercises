@@ -1,0 +1,27 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner printingByDivisiveNumber = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int a = printingByDivisiveNumber.nextInt();
+        int b = a % 3;
+        int c = a % 5;
+        int d = a % 15;
+        if (b == 0) {
+            System.out.println("qwe");
+        } else {
+            if (c == 0) {
+                System.out.println("rty");
+            } else {
+                if (d == 0) {
+                    System.out.println("qwerty");
+                }
+            }
+        }
+    }
+}
+
