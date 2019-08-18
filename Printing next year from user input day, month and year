@@ -1,0 +1,21 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner printNextYear=new Scanner(System.in);
+        System.out.println("Please enter a day: ");
+        int day = printNextYear.nextInt();
+        System.out.println("Please enter a month: ");
+        int month = printNextYear.nextInt();
+        System.out.println("Please enter a year: ");
+        int year = printNextYear.nextInt();
+
+        int nextYear = year+1;
+        System.out.println("Next year will be: "+(month+"."+day+"."+nextYear));
+
+    }
+}
+
