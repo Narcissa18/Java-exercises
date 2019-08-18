@@ -1,0 +1,21 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner leap = new Scanner(System.in);
+        System.out.println("Please enter a year to find out if it is leap or not:");
+        int month = leap.nextInt();
+        month = month%4;
+        if(month==0) {
+            System.out.println("This is leap year.");
+            System.out.println("There are 29 days in February");
+        }else{
+            System.out.println("This is not a leap year.");
+        }
+
+
+        }
+    }
