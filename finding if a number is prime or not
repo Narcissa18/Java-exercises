@@ -1,0 +1,28 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner findingPrimeOrNot = new Scanner(System.in);
+        //taking user input of a whole number
+        System.out.println("Please enter a whole number");
+        int a = findingPrimeOrNot.nextInt();
+        int i;
+        boolean isPrime = true;
+        for (i = 2; i < a; i++) {
+            if (a % i == 0) {
+                isPrime = false;
+            }
+        }
+        if (a % i == 0 && isPrime) {
+            System.out.println(a + " is a prime number.");
+        } else {
+            System.out.println(a+ "is not a prime number.");
+        }
+    }
+
+
+}
+
