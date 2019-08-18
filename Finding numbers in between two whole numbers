@@ -1,0 +1,24 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner findNumbersInBetween = new Scanner(System.in);
+        System.out.println("Please enter your first number.");
+        int num1 = findNumbersInBetween.nextInt();
+        System.out.println("Please enter your second number.");
+        int num2 = findNumbersInBetween.nextInt();
+        String middleNums = "";
+        for (int i = num1 + 1; i < num2; i++) {
+            middleNums += i;
+            if (i != num2 - 1) {
+                middleNums += ", ";
+            }
+        }
+        System.out.println("The numbers that are in the middle:");
+        System.out.println(middleNums);
+    }
+}
+
