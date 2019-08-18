@@ -1,0 +1,27 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner biggestNumber = new Scanner(System.in);
+        System.out.println("Enter 1st number");
+        int a = biggestNumber.nextInt();
+        System.out.println("Enter 2nd number");
+        int b = biggestNumber.nextInt();
+        System.out.println("Enter 3rd number");
+        int c = biggestNumber.nextInt();
+        if (a > b && a > c) {
+            System.out.println(a + " is the biggest number.");
+        } else {
+            if (b > a && b > c) {
+                System.out.println(b + " is the biggest number.");
+            } else if (c > a && c > b) {
+                System.out.println(c + " is the biggest number.");
+            }
+
+        }
+    }
+}
+
