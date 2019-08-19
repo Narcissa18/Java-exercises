@@ -1,0 +1,45 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner task = new Scanner(System.in);
+        System.out.println("Choose any of the options: ");
+        char A, B, C, D, E;
+        System.out.println("A\nB\nC\nD\nE");
+        String option = task.nextLine();
+
+        switch (option) {
+            case "A":
+            case "a":
+                System.out.println("You chose A");
+                break;
+            case "B":
+            case "b":
+
+                System.out.println("You chose B");
+                break;
+            case "C":
+            case "c":
+
+                System.out.println("You chose C");
+                break;
+            case "D":
+            case "d":
+                System.out.println("You chose D");
+                break;
+            case "E":
+            case "e":
+                System.out.println("You chose E");
+                break;
+            default:
+                System.out.println("This option does not exist");
+                break;
+        }
+
+
+    }
+}
+
