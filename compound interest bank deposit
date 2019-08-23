@@ -1,0 +1,29 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//compund interest with bank deposit
+
+        //A=d(1+r)^n
+        Scanner input = new Scanner(System.in);
+        double amount;
+        System.out.println("Please enter the amount you deposited: ");
+        double deposit = input.nextDouble();
+        System.out.println("Please enter for how many years would you like to deposit: ");
+        int years = input.nextInt();
+        System.out.println("Please enter the interest percentage: ");
+        double interest = input.nextDouble();
+        double rate = interest * 0.01;
+        for (int year = 1; year <= years; year++) {
+            amount = deposit * Math.pow(1 + rate, year);
+            System.out.println(year + "\t" + amount);
+        }
+
+
+    }
+}
+
+
