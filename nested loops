@@ -1,0 +1,56 @@
+//PRinting star rows
+
+package com.nargiza;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        for (int i=0; i<=4;i++){
+
+            for(int j=0;j<4;j++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+
+        }
+
+    }
+}
+
+// printing stars 5 to 1 rows
+package com.nargiza;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        for (int i=1; i<=5;i++){
+
+            for(int j=5;j>=i;j--) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+
+        }
+
+    }
+}
+//printing out number pyramid 1-5
+package com.nargiza;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        for (int i=1; i<=5;i++){
+
+            for(int j=0;j<i;j++) {
+                System.out.print(i);
+            }
+            System.out.println(" ");
+
+        }
+
+    }
+}
