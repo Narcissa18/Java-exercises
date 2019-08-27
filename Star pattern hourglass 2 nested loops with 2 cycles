@@ -1,0 +1,87 @@
+//METHOD 1
+package com.nargiza;
+
+public class Main {
+    public static void main(String[] args) {
+        int firstSpaceCounter = 0;
+        int totalRowNums = 9;
+        int starCounter = 5;
+        for (int k = 1; k <= totalRowNums; k++) {
+            if (k != 1) {
+                if (k <= 5) {
+                    firstSpaceCounter++;
+                } else if (k >= 6) {
+                    firstSpaceCounter--;
+                }
+            }
+
+            if (k > 1 && k <= 5) {
+                starCounter--;
+            }
+            else {
+                if (starCounter == 1) {
+                    starCounter = 2;
+                }
+                else if (starCounter != 5) {
+                    starCounter++;
+                }
+            }
+
+            if (firstSpaceCounter > 0) {
+                for (int j = 0; j < firstSpaceCounter; j++) {
+                    System.out.print(' ');
+                }
+            }
+
+            for (int i = 0; i < starCounter; i++) {
+                System.out.print("* ");
+            }
+
+            System.out.println("");
+        }
+    }
+}
+
+//METHOD 2
+
+package com.nargiza;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        int starCounter = 5;
+        int spaceCounter = 0;
+        int rows = 5;
+
+        for (int i = 0; i < rows; i++) { // this is row loop
+            for (int k = 0; k < spaceCounter; k++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j < starCounter; j++){ // this is printing only stars and spaces per each row.
+                System.out.print("* ");
+            }
+
+            starCounter--;
+            spaceCounter++;
+            System.out.println();
+        }
+
+        starCounter = 2;
+        spaceCounter -= 2;
+
+        for (int i = 1; i < rows; i++) {
+            for (int j = 0; j < spaceCounter; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < starCounter; k++ ) {
+                System.out.print("* ");
+            }
+            starCounter++;
+            spaceCounter--;
+            System.out.println();
+        }
+
+
+    }
+}
