@@ -1,0 +1,34 @@
+
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner name = new Scanner(System.in);
+        System.out.println("Please enter  guest's name: ");
+        String guest1 = name.nextLine();
+        String allGuests = guest1;
+        String guestNext;
+        String PositiveResponseCapital = "Y";
+        String PositiveResponseLower = "y";
+        Boolean loopCondition = true;
+
+
+        do {
+            System.out.println("Do you want to enter another guest's name?");
+            String requestResponse = name.nextLine();
+            if (requestResponse.equals(PositiveResponseCapital) || requestResponse.equals(PositiveResponseLower)) {
+                System.out.println("Please enter another guest's name: ");
+                guestNext = name.nextLine();
+                allGuests = allGuests + ", " + guestNext;
+            } else {
+                loopCondition = false;
+            }
+
+        } while (loopCondition);
+        System.out.println("Your guest list is as follows: " + allGuests+"\nEnjoy the party!");
+
+    }
+}
