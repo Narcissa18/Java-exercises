@@ -1,0 +1,22 @@
+package com.nargiza;
+
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+        int winNum = random.nextInt(101);
+        System.out.println("Enter a number 0 to 999: ");
+        int userNum = input.nextInt();
+if (userNum==winNum){
+    System.out.println("Get your money you WON!");
+}else{
+    System.out.println("No luck today buddy you didn't win!");
+    System.out.println("your number was "+userNum);
+    System.out.println("Winning number was "+winNum);
+}
+    }
+}
