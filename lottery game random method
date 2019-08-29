@@ -6,17 +6,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        Random random = new Random();
-        int winNum = random.nextInt(101);
-        System.out.println("Enter a number 0 to 999: ");
-        int userNum = input.nextInt();
-if (userNum==winNum){
-    System.out.println("Get your money you WON!");
-}else{
-    System.out.println("No luck today buddy you didn't win!");
-    System.out.println("your number was "+userNum);
-    System.out.println("Winning number was "+winNum);
-}
+
+        Random randLottery = new Random();
+        int winNum = randLottery.nextInt(101);
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Enter a number to test your luck: ");
+        int userNum = userInput.nextInt();
+        if(userNum>100 || userNum<0){
+            System.out.println("Your input is not valid");
+        }else if (winNum==userNum){
+            System.out.println("You WON! YAHOO!");
+        }else{
+            System.out.println( "Sorry, no luck today!\nWinning number was "+winNum);
+        }
+
     }
 }
