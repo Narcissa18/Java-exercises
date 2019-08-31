@@ -1,0 +1,21 @@
+package com.nargiza;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String s1 = "Az";
+        String s2 = "Aziz";
+
+        int x = s1.compareTo(s2);
+        if (x>0){
+            System.out.println("\""+s1+"\""+" is greater than"+" \""+s2+"\"");
+        }else if (x<0) {
+            System.out.println("\""+s1+"\""+" is less than"+"\""+s2+"\"");
+        }else
+            System.out.println("They are equal");
+
+
+    }
+}
+
+
