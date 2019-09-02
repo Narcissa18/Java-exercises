@@ -1,0 +1,24 @@
+package com.nargiza;
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your array number");
+        int number = input.nextInt();
+        int[] arrInt = new int[number];
+        for (int i = 0; i < number; i++) {
+            System.out.println("Please enter a number");
+            arrInt[i] = input.nextInt();
+        }
+        System.out.println("Your typed array values are: " + Arrays.toString(arrInt));
+
+
+    }
+}
+
+
