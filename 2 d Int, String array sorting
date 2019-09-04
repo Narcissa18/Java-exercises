@@ -1,0 +1,58 @@
+package com.nargiza;
+
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int[][] intArray = {{89, 45, 65, 7}, {34, 21, 35, 67}, {876, 3, 21, 65}};
+        String[][] strArray = {{"abc", "test", "acd"}, {"banana", "apple", "grapes", "oranges"}, {"notebook", "pencil case", "eraser", "agenda"}};
+        System.out.println("Unsorted arrays: ");
+        printArray(intArray, strArray);
+        sortArray(intArray, strArray);
+        System.out.println("Sorted arrays: ");
+        printArray(intArray, strArray);
+
+    }
+
+    private static void printArray(int[][] arrayInt, String[][] arrayStr) {
+        System.out.println("Integer array: ");
+        System.out.println("**************************************************");
+        for (int i = 0; i < arrayInt.length; i++) {
+            for (int j = 0; j < arrayInt[i].length; j++) {
+                System.out.print(arrayInt[i][j] + "       ");
+            }
+            System.out.println();
+        }
+        System.out.println("Array of Strings: ");
+        System.out.println("**************************************************");
+
+        for (int i = 0; i < arrayStr.length; i++) {
+            for (int j = 0; j < arrayStr[i].length; j++) {
+                System.out.print(arrayStr[i][j] + "           ");
+            }
+            System.out.println();
+        }
+
+    }
+
+    private static void sortArray(int[][] arrayInt, String[][] arrayStr) {
+        System.out.println("Integer array: ");
+        System.out.println("**************************************************");
+        for (int i = 0; i < arrayInt.length; i++) {
+            for (int j = 0; j < arrayInt[i].length; j++) {
+                Arrays.sort(arrayInt[i]);
+            }
+
+        }
+
+        System.out.println("Array of Strings: ");
+        System.out.println("**************************************************");
+        for (int i = 0; i < arrayStr.length; i++) {
+            for (int j = 0; j < arrayStr[i].length; j++) {
+                Arrays.sort(arrayStr[i]);
+            }
+        }
+    }
+}
