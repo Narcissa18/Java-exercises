@@ -32,3 +32,39 @@ public class Main {
 
     }
 }
+
+
+package com.nargiza;
+
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+        int[][] arrayInt = new int[5][5];
+        int count = 0;
+
+
+        for (int i = 0; i < arrayInt.length; i++) {
+            for (int j = 0; j < arrayInt[i].length; j++) {
+                arrayInt[i][j] = random.nextInt(100);
+                if (arrayInt[i][j] == 57) {
+                    count++;
+                }
+            }
+
+        }
+        System.out.println("How many times 57 occurs: " + count);
+        for (int i = 0; i < arrayInt.length; i++) {
+            for (int j = 0; j < arrayInt[i].length; j++) {
+                System.out.print(arrayInt[i][j] + "\t");
+
+            }
+            System.out.println();
+        }
+
+
+    }
+}
