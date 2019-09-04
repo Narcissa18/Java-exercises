@@ -1,0 +1,34 @@
+package com.nargiza;
+
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+        int[][] arrayInt = new int[5][5];
+
+        out:
+        for (int i = 0; i < arrayInt.length; i++) {
+            for (int j = 0; j < arrayInt[i].length; j++) {
+                arrayInt[i][j] = random.nextInt(100);
+                if (arrayInt[i][j] == 66) {
+                    System.out.println("i= " + i + " j= " + j);
+                    break out;
+                }
+
+            }
+
+        }
+        for (int i = 0; i <arrayInt.length ; i++) {
+            for (int j = 0; j <arrayInt[i].length ; j++) {
+                System.out.print(arrayInt[i][j]+"\t");
+
+            }
+            System.out.println();
+        }
+
+
+    }
+}
