@@ -1,0 +1,29 @@
+package com.nargiza;
+
+import java.util.Scanner;
+
+public class Main {
+    public static boolean isLoggedIn (String userName, String password){
+        if(userName.equalsIgnoreCase("Java") && password.equalsIgnoreCase("Class")) {
+            return true;
+        }
+            else {
+                return false;
+            }
+        }
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter your username: ");
+        String username = scanner.nextLine();
+        System.out.println("Please enter your password: ");
+        String password = scanner.nextLine();
+        
+        if (isLoggedIn(username, password)) {
+            System.out.println("You are logged in!");
+        }else {
+            System.out.println("Wrong password or username");
+        }
+    }
+}
